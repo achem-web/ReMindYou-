@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>ReMind Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>ReMind</h2>
+        </div>
+        <button class="logout-button" onclick="logout()">Logout</button>
+        <div id="chat-box" class="chat-box"></div>
+
+    <div id="mood-buttons" class="mood-buttons text-center my-3">
+        <div class="btn-group btn-group-sm flex-wrap" role="group">
+            <button class="btn btn-primary m-1" onclick="handleMood('Happy')">Happy</button>
+            <button class="btn btn-primary m-1" onclick="handleMood('Sad')">Sad</button>
+            <button class="btn btn-primary m-1" onclick="handleMood('Stressed')">Stressed</button>
+            <button class="btn btn-primary m-1" onclick="handleMood('Motivated')">Motivated</button>
+            <button class="btn btn-primary m-1" onclick="handleMood('Angry')">Angry</button>
+            <button class="btn btn-primary m-1" onclick="handleMood('Anxious')">Anxious</button>
+            <button class="btn btn-primary m-1" onclick="handleMood('Excited')">Excited</button>
+            <button class="btn btn-primary m-1" onclick="handleMood('Calm')">Calm</button>
+        </div>
+    </div>
+
+    <div id="more-buttons" class="more-buttons text-center my-3" style="display: none;">
+        <div class="btn-group btn-group-sm">
+            <button class="btn btn-success m-1" onclick="handleMore('Yes')">Yes</button>
+            <button class="btn btn-danger m-1" onclick="handleMore('No')">No</button>
+            <button class="btn btn-warning m-1" onclick="handleMore('Thank you')">Thank you</button>
+            <button class="btn btn-info m-1" onclick="handleMore('Okay')">Okay</button>
+        </div>
+    </div>
+
+    <div class="chat-input d-flex justify-content-center my-3">
+        <input type="text" id="user-input" class="form-control me-2" placeholder="Type your message...">
+        <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+    </div>
+    </div>
+    </div>
+<div class="credits-section">
+       <div class="logo-container">
+    <img src="logo.png" alt="Logo" class="logo-image img-fluid">
+        </div>
+
+    <p class="font-weight-light">Created by: <br> Taño, M. Toledo, H. Monteflor, B. Omogtong, C. <br>  Bernal, P. Tulingan, O. Sombilio, S. </p><br>
+    
+    <p class="font-weight-light">If you are experiencing mental health concerns, please contact:</p>
+    
+    <div class="contact-info">
+        <p class="font-weight-light">National Center for Mental Health (NCMH) Crisis Hotline<br>
+                                    Call: 0917-899-USAP (8727) or 1553 (landline)<br>
+                                    Available 24/7 for emotional support and crisis intervention.</p>
+
+                                    <p class="font-weight-light">Hopeline PH<br>
+                                    Call or text: 0917-558-HOPE (4673) or 2919 (Globe & TM subscribers only)<br>
+                                    Available 24/7 for anyone in need of mental health support.</p>
+
+                                    <p class="font-weight-light">Bantay Bata 163 (Children and Youth Support)<br>
+                                    Call: 163 (Hotline)<br>
+                                    They also provide services for children and families in crisis situations.</p>
+
+        <p class="font-weight-light email">Mental Health Websites:<br>
+                                            <br>Mental Health America: www.mhanational.org
+                                            </br> National Alliance on Mental Illness (NAMI): www.nami.org
+                                            </br> Psychology Today: www.psychologytoday.com</p>
+    </div>
+</div>
+
+    <script>
+    function logout() {
+        // Clear login status from localStorage
+        localStorage.removeItem('isLoggedIn');
+        // Redirect to login page
+        window.location.href = "login.html";
+    }
+    </script>
+
+        <script src="script.js"></script>
+</body>
+</html>
